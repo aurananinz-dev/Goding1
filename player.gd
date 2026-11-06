@@ -27,7 +27,7 @@ func _physics_process(delta):
 		velocity.y = jump_velocity
 
 	# Movimento con i tasti WASD o le frecce
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * speed

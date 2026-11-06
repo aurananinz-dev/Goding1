@@ -4,6 +4,14 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sn8qc"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4f0pm"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sn8qc"]
+material = SubResource("StandardMaterial3D_4f0pm")
+radius = 0.72802734
+height = 2.9648438
+
 [node name="Player" type="CharacterBody3D" unique_id=1144507332]
 script = ExtResource("1_4flbx")
 
@@ -11,11 +19,16 @@ script = ExtResource("1_4flbx")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5251966, 0)
 shape = SubResource("CapsuleShape3D_sn8qc")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1209481095]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 0, -0.001172781, 0)
+cast_shadow = 3
+mesh = SubResource("CapsuleMesh_sn8qc")
+
 [node name="Head" type="Node3D" parent="." unique_id=1021392520]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3598557, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=290013408]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.66622794, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 fov = 69.768196
 near = 0.023
 far = 4014.45
