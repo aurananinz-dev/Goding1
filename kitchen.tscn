@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dpb5j5oex3rhb"]
 
+[ext_resource type="PackedScene" uid="uid://b7ewcf5wk5t1" path="res://player.tscn" id="1_vloss"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_xsxwa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rbxf2"]
@@ -35,3 +37,8 @@ mesh = SubResource("BoxMesh_uto7t")
 [node name="box4" type="MeshInstance3D" parent="box" unique_id=1641124582]
 transform = Transform3D(0.99997896, 0, 0.006541561, 0, 1, 0, -0.006541561, 0, 0.99997896, 1.7688925, -0.17496437, 0.55465007)
 mesh = SubResource("BoxMesh_uto7t")
+
+[node name="Player" parent="." unique_id=1144507332 instance=ExtResource("1_vloss")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=98098959]
+transform = Transform3D(-0.560639, 0.5063812, -0.65518075, 0, 0.79122347, 0.61152697, 0.8280603, 0.3428459, -0.44359076, 0, 10, 0)
