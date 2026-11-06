@@ -1,15 +1,9 @@
 [gd_scene format=3 uid="uid://1wow51wugkry"]
 
-[ext_resource type="PackedScene" uid="uid://1wow51wugkry" path="res://node_2d.tscn" id="1_wtcfe"]
+[node name="Node2D" type="Node2D" unique_id=519278719]
 
-[node name="Node2D" type="Node2D" unique_id=595395849]
-position = Vector2(-5, -2)
-
-[node name="Node2D" parent="." unique_id=1413587825 instance=ExtResource("1_wtcfe")]
-position = Vector2(63, 54)
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1354869370]
-offset_left = 504.0
-offset_top = 57.0
-offset_right = 950.0
-offset_bottom = 126.0
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1585948472]
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 163.0
+offset_bottom = 134.0
