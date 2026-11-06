@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dpb5j5oex3rhb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xsxwa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rbxf2"]
+size = Vector3(2, 0.001, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uto7t"]
+
+[node name="kitchen" type="Node3D" unique_id=1694998838]
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=455583882]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_xsxwa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=1035405440]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=1002862477]
+shape = SubResource("BoxShape3D_rbxf2")
+
+[node name="box" type="Node3D" parent="." unique_id=702327892]
+
+[node name="box1" type="MeshInstance3D" parent="box" unique_id=558688048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.637, -0.33697355, -1.747)
+mesh = SubResource("BoxMesh_uto7t")
+
+[node name="box2" type="MeshInstance3D" parent="box" unique_id=804608879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7106438, -0.12616915, -1.747)
+mesh = SubResource("BoxMesh_uto7t")
+
+[node name="box3" type="MeshInstance3D" parent="box" unique_id=1921297819]
+transform = Transform3D(0.99999464, 0, 0.0032707972, 0, 1, 0, -0.0032707972, 0, 0.99999464, 1.5635564, -0.15056676, -1.494277)
+mesh = SubResource("BoxMesh_uto7t")
+
+[node name="box4" type="MeshInstance3D" parent="box" unique_id=1641124582]
+transform = Transform3D(0.99997896, 0, 0.006541561, 0, 1, 0, -0.006541561, 0, 0.99997896, 1.7688925, -0.17496437, 0.55465007)
+mesh = SubResource("BoxMesh_uto7t")
