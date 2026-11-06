@@ -1,27 +1,20 @@
-[gd_scene format=3 uid="uid://1wow51wugkry"]
+[gd_scene format=3 uid="uid://b5dg6yfosk5rf"]
 
-[node name="Node2D" type="Node2D" unique_id=519278719]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uto7t"]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1585948472]
-offset_left = 20.0
-offset_top = 18.0
-offset_right = 163.0
-offset_bottom = 134.0
+[node name="Node3D" type="Node3D" unique_id=1720606674]
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1829435296]
-offset_left = 479.36365
-offset_top = 241.0
-offset_right = 584.0
-offset_bottom = 351.0
+[node name="Tommy" type="CharacterBody3D" parent="." unique_id=1193661851]
 
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=732286827]
-offset_left = 316.0
-offset_top = 257.36365
-offset_right = 421.18182
-offset_bottom = 334.0
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tommy" unique_id=1660294606]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_uto7t")
 
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=1736610582]
-offset_left = 88.0
-offset_top = 264.0
-offset_right = 128.0
-offset_bottom = 455.0
+[node name="Head" type="Node3D" parent="Tommy" unique_id=1534295376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Tommy/Head" unique_id=1431949263]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Tommy/Head/Camera3D" unique_id=860486530]
+target_position = Vector3(0, 0, -3)
