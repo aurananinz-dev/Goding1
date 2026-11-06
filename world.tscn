@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bd4b4ymonnpm0"]
 
+[ext_resource type="PackedScene" uid="uid://b5dg6yfosk5rf" path="res://player.tscn" id="1_f3sb7"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_uto7t"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gv5m4"]
@@ -15,3 +17,5 @@ mesh = SubResource("PlaneMesh_uto7t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1993883063]
 shape = SubResource("ConcavePolygonShape3D_gv5m4")
+
+[node name="Tommy" parent="." unique_id=1193661851 instance=ExtResource("1_f3sb7")]
